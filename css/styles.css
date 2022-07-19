@@ -1,0 +1,26 @@
+body {
+    background-image: url(../img/Universo1.jpg);
+    background-color: rgb(59, 59, 59);
+    background-blend-mode: soft-light;
+    background-size: cover;
+}
+
+h1 {
+    color: yellow;
+    font-family: lint-mccree, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+h2 {
+    color: white;
+    font-family: lint-mccree, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+    padding: 1rem;
+}
