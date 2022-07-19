@@ -49,7 +49,7 @@ function procesamiento (valor) {
 }
 
 function salida (valor) {
-    alert('Gracias por participar')
+    alert('Gracias por participar!');
 } 
 
 salida(procesamiento(entrada()));
