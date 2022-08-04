@@ -1,114 +1,43 @@
-//CODIGO NUEVO
-
-function Usuario (nombre, dia, mes, signo) {
+function Usuario(nombre, dia, mes,signo,elemento) {
     this.nombre = nombre;
     this.dia = dia;
     this.mes = mes;
     this.signo = signo;
+    this.elemento = elemento;
 }  
 
 let nombre = prompt('Ingresá tu nombre');
 let dia = parseInt(prompt('Ingresá el día de tu nacimiento'));
 let mes = parseInt(prompt('Ingresá el mes de tu nacimiento'));
-let signo = ('');
+let signo = '';
+let elemento = '';
 
-const usuario1 = new Usuario (nombre, dia, mes, signo);
+const usuario1 = new Usuario(nombre, dia, mes, signo, elemento);
 
 const signos = [
-    signosFuego = [
-    {signo: 'Aries', fecha: ((dia >= 21 && mes == 3) || (dia <= 19 && mes == 4))},
-    {signo: 'Leo', fecha: ((dia >= 23 && mes == 7) || (dia <= 22 && mes == 8))},
-    {signo: 'Sagitario', fecha: ((dia >= 22 && mes == 11) || (dia <= 21 && mes == 12))}
-    ],
-
-    signosTierra = [
-        {signo: 'Tauro', fecha: ((dia >= 20 && mes == 4) || (dia <= 20 && mes == 5))},
-        {signo: 'Virgo', fecha: ((dia >= 23 && mes == 8) || (dia <= 22 && mes == 9))},
-        {signo: 'Capricornio', fecha: ((dia >= 22 && mes == 12) || (dia <= 19 && mes == 1))}
-    ],
-
-    signosAire = [
-        {signo: 'Géminis', fecha: ((dia >= 21 && mes == 5) || (dia <= 20 && mes == 6))},
-        {signo: 'Libra', fecha: ((dia >= 23 && mes == 9) || (dia <= 22 && mes == 10))},
-        {signo: 'Acuario', fecha: ((dia >= 20 && mes == 1) || (dia <= 18 && mes == 2))}
-    ],
-    
-    signosAgua = [
-        {signo: 'Cáncer', fecha: ((dia >= 21 && mes == 6) || (dia <= 22 && mes == 7))},
-        {signo: 'Escorpio', fecha: ((dia >= 23 && mes == 10) || (dia <= 21 && mes == 11))},
-        {signo: 'Piscis', fecha: ((dia >= 19 && mes == 2) || (dia <= 20 && mes == 3))}
-    ]];
-
-console.log(usuario1);
-
- 
-/* const signosFuego = [
-    {signo: 'Aries', fecha: ['((dia >= 21 && mes == 3) || (dia <= 19 && mes == 4))']},
-    {signo: 'Leo', fecha: ['((dia >= 23 && mes == 7) || (dia <= 22 && mes == 8))']},
-    {signo: 'Sagitario', fecha: ['((dia >= 22 && mes == 11) || (dia <= 21 && mes == 12))']}
+    {signo: 'Aries', fecha: ((dia >= 21 && mes == 3) || (dia <= 19 && mes == 4)), elemento: 'Fuego'},
+    {signo: 'Tauro', fecha: ((dia >= 20 && mes == 4) || (dia <= 20 && mes == 5)), elemento: 'Tierra'},
+    {signo: 'Géminis', fecha: ((dia >= 21 && mes == 5) || (dia <= 20 && mes == 6)), elemento: 'Aire'},
+    {signo: 'Cáncer', fecha: ((dia >= 21 && mes == 6) || (dia <= 22 && mes == 7)), elemento: 'Agua'},
+    {signo: 'Leo', fecha: ((dia >= 23 && mes == 7) || (dia <= 22 && mes == 8)), elemento: 'Fuego'},
+    {signo: 'Virgo', fecha: ((dia >= 23 && mes == 8) || (dia <= 22 && mes == 9)), elemento: 'Tierra'},
+    {signo: 'Libra', fecha: ((dia >= 23 && mes == 9) || (dia <= 22 && mes == 10)), elemento: 'Aire'},
+    {signo: 'Escorpio', fecha: ((dia >= 23 && mes == 10) || (dia <= 21 && mes == 11)), elemento: 'Agua'},
+    {signo: 'Sagitario', fecha: ((dia >= 22 && mes == 11) || (dia <= 21 && mes == 12)), elemento: 'Fuego'},
+    {signo: 'Capricornio', fecha: ((dia >= 22 && mes == 12) || (dia <= 19 && mes == 1)), elemento: 'Tierra'},
+    {signo: 'Acuario', fecha: ((dia >= 20 && mes == 1) || (dia <= 18 && mes == 2)), elemento: 'Aire'},
+    {signo: 'Piscis', fecha: ((dia >= 19 && mes == 2) || (dia <= 20 && mes == 3)), elemento: 'Agua'},
 ];
 
-const signosTierra = [
-    {signo: 'Tauro', fecha: ['((dia >= 20 && mes == 4) || (dia <= 20 && mes == 5))']},
-    {signo: 'Virgo', fecha: ['((dia >= 23 && mes == 8) || (dia <= 22 && mes == 9))']},
-    {signo: 'Capricornio', fecha: ['((dia >= 22 && mes == 12) || (dia <= 19 && mes == 1))']}
-];
+const signoTrue = signos.filter(function(Usuario) {
+    return signos.fecha == this.mes && signos.fecha == this.dia;
+});
 
-const signosAire = [
-    {signo: 'Géminis', fecha: ['((dia >= 21 && mes == 5) || (dia <= 20 && mes == 6))']},
-    {signo: 'Libra', fecha: ['((dia >= 23 && mes == 9) || (dia <= 22 && mes == 10))']},
-    {signo: 'Acuario', fecha: ['((dia >= 20 && mes == 1) || (dia <= 18 && mes == 2))']}
-];
+const encontrarSigno = signoTrue.find((signo) => signo.fecha == true);
+alert('Bienvenido/a ' + nombre + '. Tu signo el Zodiaco es ' + encontrarSigno.signo + '. Y su elemento es ' + encontrarSigno.elemento);
 
-const signosAgua = [
-    {signo: 'Cáncer', fecha: ['((dia >= 21 && mes == 6) || (dia <= 22 && mes == 7))']},
-    {signo: 'Escorpio', fecha: ['((dia >= 23 && mes == 10) || (dia <= 21 && mes == 11))']},
-    {signo: 'Piscis', fecha: ['((dia >= 19 && mes == 2) || (dia <= 20 && mes == 3))']}
-]; */
-
-//CODIGO VIEJO
-/* function entrada() {
-    nombre = prompt('Ingresá tu nombre')
-    alert('Bienvendio/a ' + nombre + '! Vamos a calcular tu signo del Zodiaco')
-
-    dia = parseInt(prompt('Ingresá el día de tu nacimiento'));
-    mes = parseInt(prompt('Ingresá el mes de tu nacimiento'));
-}   */
-/* const signos = ['Aries', 'Tauro', 'Géminis', 'Cáncer','Leo','Virgo','Libra', 'Escorpio','Sagitario','Capricornio','Acuario','Piscis'] */ 
 /* 
-function procesamiento(valor) {
-    if ((dia >= 21 && mes == 3) || (dia <= 19 && mes == 4)) {
-        alert('Tu signo del Zodiaco es ' + signosFuego[0]);
-    } else if ((dia >= 20 && mes == 4) || (dia <= 20 && mes == 5)) {
-        alert('Tu signo del Zodiaco es ' + signosTierra[0]);
-    } else if ((dia >= 21 && mes == 5) || (dia <= 20 && mes == 6)) {
-        alert('Tu signo del Zodiaco es ' + signosAire[0]);
-    } else if ((dia >= 21 && mes == 6) || (dia <= 22 && mes == 7)) {
-        alert('Tu signo del Zodiaco es ' + signosAgua[0]);
-    } else if ((dia >= 23 && mes == 7) || (dia <= 22 && mes == 8)) {
-        alert('Tu signo del Zodiaco es ' + signosFuego[1]);
-    } else if ((dia >= 23 && mes == 8) || (dia <= 22 && mes == 9)) {
-        alert('Tu signo del Zodiaco es ' + signosTierra[1]);
-    } else if ((dia >= 23 && mes == 9) || (dia <= 22 && mes == 10)) {
-        alert('Tu signo del Zodiaco es ' + signosAire[1]);
-    } else if ((dia >= 23 && mes == 10) || (dia <= 21 && mes == 11)) {
-        alert('Tu signo del Zodiaco es ' + signosAgua[1]);
-    } else if ((dia >= 22 && mes == 11) || (dia <= 21 && mes == 12)) {
-        alert('Tu signo del Zodiaco es ' + signosFuego[2]);
-    } else if ((dia >= 22 && mes == 12) || (dia <= 19 && mes == 1)) {
-        alert('Tu signo del Zodiaco es ' + signosTierra[2]);
-    } else if ((dia >= 20 && mes == 1) || (dia <= 18 && mes == 2)) {
-        alert('Tu signo del Zodiaco es ' + signosAire[2]);
-    } else if ((dia >= 19 && mes == 2) || (dia <= 20 && mes == 3)) {
-        alert('Tu signo del Zodiaco es ' + signosAgua[2]);
-    } else {
-        alert('Error');
-    }
-}
-*/
-
-/* function salida(valor) {
-    alert('Gracias por participar!');
-}
-
-salida(procesamiento(entrada()));  */
+const signosFuego = signos.filter((signo) => signo.elemento == 'Fuego');
+const signosTierra = signos.filter((signo) => signo.elemento == 'Tierra');
+const signosAire = signos.filter((signo) => signo.elemento == 'Aire');
+const signosAgua = signos.filter((signo) => signo.elemento == 'Agua'); */
