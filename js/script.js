@@ -1,3 +1,9 @@
+const btnEnviar = document.getElementById('btnEnviar');
+      
+btnEnviar.addEventListener('click', () => {
+    alert('Ingreso exitoso');
+});
+
 function Usuario(nombre, dia, mes,signo,elemento) {
     this.nombre = nombre;
     this.dia = dia;
@@ -41,3 +47,4 @@ const signosFuego = signos.filter((signo) => signo.elemento == 'Fuego');
 const signosTierra = signos.filter((signo) => signo.elemento == 'Tierra');
 const signosAire = signos.filter((signo) => signo.elemento == 'Aire');
 const signosAgua = signos.filter((signo) => signo.elemento == 'Agua'); */
+
