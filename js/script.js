@@ -1,25 +1,3 @@
-const btnEnviar = document.getElementById('btnEnviar');
-      
-btnEnviar.addEventListener('click', () => {
-    alert('Ingreso exitoso');
-});
-
-function Usuario(nombre, dia, mes,signo,elemento) {
-    this.nombre = nombre;
-    this.dia = dia;
-    this.mes = mes;
-    this.signo = signo;
-    this.elemento = elemento;
-}  
-
-let nombre = prompt('Ingresá tu nombre');
-let dia = parseInt(prompt('Ingresá el día de tu nacimiento'));
-let mes = parseInt(prompt('Ingresá el mes de tu nacimiento'));
-let signo = '';
-let elemento = '';
-
-const usuario1 = new Usuario(nombre, dia, mes, signo, elemento);
-
 const signos = [
     {signo: 'Aries', fecha: ((dia >= 21 && mes == 3) || (dia <= 19 && mes == 4)), elemento: 'Fuego'},
     {signo: 'Tauro', fecha: ((dia >= 20 && mes == 4) || (dia <= 20 && mes == 5)), elemento: 'Tierra'},
@@ -35,16 +13,35 @@ const signos = [
     {signo: 'Piscis', fecha: ((dia >= 19 && mes == 2) || (dia <= 20 && mes == 3)), elemento: 'Agua'},
 ];
 
-const signoTrue = signos.filter(function(Usuario) {
-    return signos.fecha == this.mes && signos.fecha == this.dia;
+let nombreUsuario = document.getElementById('nombre');
+let diaUsuario = document.getElementById('dia');
+let mesUsuario = document.getElementById('mes');
+let btnCalcular = document.getElementById('btnCalcular');
+let btnBorrar = document.getElementById('btnBorrar');
+
+btnCalcular.addEventListener('click',()=>{
+    localStorage.setItem('Nombre',nombreUsuario.value);
+    localStorage.setItem('Dia de nacimiento',diaUsuario.value);
+    localStorage.setItem('Mes de nacimiento',mesUsuario.value);
+    sessionStorage.setItem('Nombre',nombreUsuario.value);
+    sessionStorage.setItem('Dia de nacimiento',diaUsuario.value);
+    sessionStorage.setItem('Mes de nacimiento',mesUsuario.value);
 });
 
-const encontrarSigno = signoTrue.find((signo) => signo.fecha == true);
-alert('Bienvenido/a ' + nombre + '. Tu signo el Zodiaco es ' + encontrarSigno.signo + '. Y su elemento es ' + encontrarSigno.elemento);
+btnBorrar.addEventListener('click',()=>{
+    sessionStorage.clear();
+    localStorage.clear();
+});
 
+const fechaUsuario = [
+    dia = parseInt(diaUsuario),
+    mes = parseInt(mesUsuario)
+];
+
+const signoTrue = signos.filter(function(fechaUsuario){
+    return signos.fecha == fechaUsuario.dia && signos.fecha == fechaUsuario.mes;
+});
 /* 
-const signosFuego = signos.filter((signo) => signo.elemento == 'Fuego');
-const signosTierra = signos.filter((signo) => signo.elemento == 'Tierra');
-const signosAire = signos.filter((signo) => signo.elemento == 'Aire');
-const signosAgua = signos.filter((signo) => signo.elemento == 'Agua'); */
-
+const encontrarSigno = signoTrue.find((signo) => signo.fecha == true);
+let signo = encontrarSigno.signo;
+let elemento = encontrarSigno.elemento; */

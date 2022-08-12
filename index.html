@@ -15,27 +15,27 @@
 <body>
     <main >
         <div class="titulo">
-            <h1>Te damos la bienvenida</h1>
+            <h1>Vamos a calcular tu signo</h1>
         </div>
         
-        <div class="formIngreso">
-            <form>
+        <div class="formSigno">
+            <form id="form">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Ingresá tu mail:</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">Nunca compartiremos tu mail con nadie más.</div>
+                    <label for="exampleInputEmail1" class="form-label">Ingresá tu nombre:</label>
+                    <input id="nombre" class="form-control" type="text">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Ingresá tu contraseña:</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <label class="form-label">Ingresá tu día de nacimiento:</label>
+                    <input id="dia" class="form-control" type="number">
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Ingresá tu mes de nacimiento:</label>
+                    <input id="mes" class="form-control" type="number">
                 </div>
                 <div>
-                    <a id="btnEnviar" href="./pages/calculador.html" type="submit" class="btn-lg btn btn-outline-warning">Enviar</a>
-                </div>
+                    <a id="btnCalcular" href="" type="submit" class="btn-lg btn btn-outline-danger">Calcular</a>
+                    <a id="btnBorrar" href="" type="submit" class="btn-lg btn btn-outline-secondary">Borrar</a>
+                </div>               
             </form>
         </div>
     </main>
