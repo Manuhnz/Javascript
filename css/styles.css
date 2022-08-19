@@ -21,20 +21,43 @@ main {
     width: 100%;
 }
 
-.titulo {
-    color: white;
-    text-transform: uppercase;
-    font-family: anton;
-    letter-spacing: 2px;
-    padding: 2rem;
-    z-index: 2;
+h1 {
+    color: #dc3545;
+    margin-bottom: 1rem;
+    font-family: pinecone-mvb-rough2;
+    font-weight: 400;
 }
 
-.formIngreso, .formSigno {
-    height: 90%;
-    padding: 3rem 2rem;
-    margin: 1rem;
+.formulario {
+    width: 28rem;
+    padding: 2rem;
+    margin-top: 3rem;
     background-color: white;
     border-radius: 1rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
+
+input, select {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border:1px solid #b8b8b8;
+    color:#515151;
+}
+.inputDia, .inputMes {
+    background-color: #d9d9d9;
+}
+.btn {
+    margin: 5px 0;
+}
+
+.inputBox {
+    display: block;
+    padding: 5px 0;
+}
+
+.flexBox {
+    display: flex;
+    gap: 0.5rem;
+}
+
