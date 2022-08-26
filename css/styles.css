@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url(../img/Astrology2.png);
+    background-image: url(../img/Zodiaco.png);
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -45,7 +45,7 @@ input, select {
     color:#515151;
 }
 .inputDia, .inputMes {
-    background-color: #d9d9d9;
+    background-color: #ededed;
 }
 .btn {
     margin: 5px 0;
