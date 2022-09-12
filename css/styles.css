@@ -77,3 +77,15 @@ select {
 .card{
     min-width: 90%;
 }
+
+.imgContainer {
+    width: 40%;
+}
+
+.textContainer {
+    width: 60%;
+}
+
+.info {
+    padding-top: 3rem;
+}

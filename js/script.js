@@ -104,15 +104,15 @@ btnCalcular.addEventListener('click', (event) => {
                 <div class="alert alert-light alert-dismissible fade show position-absolute top-50 start-50 translate-middle" role="alert">
                     <div class="card mb-3 border-0 lh-lg position-absolute top-50 start-50 translate-middle">
                     <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="${e.image}" class="img-fluid" alt="${e.signo}">
+                    <div class="col-md-4 imgContainer">
+                        <img src="${e.image}" class="img-fluid img" alt="${e.signo}">
                     </div>
-                    <div class="col-md-8">
+                    <div class="textContainer col-md-8">
                         <div class="card-body text-secondary">
-                        <h1 class="card-title">Bienvendia/o ${nombreUsuario.value}</h1>
+                        <h1 class="card-title">Bienvenda/o ${nombreUsuario.value}</h1>
                         <h6 class="card-title">Tu signo es ${e.signo} y su elemento es ${e.elemento}</h6>
                         <h6 class="card-text"></h6>
-                        <p class="card-text"> ${e.caracteristicas}</p>
+                        <p class="card-text info"> ${e.caracteristicas}</p>
                         </div>
                     </div>
                     </div>
