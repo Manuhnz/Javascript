@@ -36,63 +36,51 @@ btnCalcular.addEventListener('click', (event) => {
 
     const signos = [{
             signo: 'Aries',
-            fecha: ((datos.dia >= 21 && datos.mes == 3) || (datos.dia <= 19 && datos.mes == 4)),
-            elemento: 'el Fuego'
+            fecha: ((datos.dia >= 21 && datos.mes == 3) || (datos.dia <= 19 && datos.mes == 4))
         },
         {
             signo: 'Tauro',
-            fecha: ((datos.dia >= 20 && datos.mes == 4) || (datos.dia <= 20 && datos.mes == 5)),
-            elemento: 'la Tierra'
+            fecha: ((datos.dia >= 20 && datos.mes == 4) || (datos.dia <= 20 && datos.mes == 5))
         },
         {
             signo: 'Géminis',
-            fecha: ((datos.dia >= 21 && datos.mes == 5) || (datos.dia <= 20 && datos.mes == 6)),
-            elemento: 'el Aire'
+            fecha: ((datos.dia >= 21 && datos.mes == 5) || (datos.dia <= 20 && datos.mes == 6))
         },
         {
             signo: 'Cáncer',
-            fecha: ((datos.dia >= 21 && datos.mes == 6) || (datos.dia <= 22 && datos.mes == 7)),
-            elemento: 'el Agua'
+            fecha: ((datos.dia >= 21 && datos.mes == 6) || (datos.dia <= 22 && datos.mes == 7))
         },
         {
             signo: 'Leo',
-            fecha: ((datos.dia >= 23 && datos.mes == 7) || (datos.dia <= 22 && datos.mes == 8)),
-            elemento: 'el Fuego'
+            fecha: ((datos.dia >= 23 && datos.mes == 7) || (datos.dia <= 22 && datos.mes == 8))
         },
         {
             signo: 'Virgo',
-            fecha: ((datos.dia >= 23 && datos.mes == 8) || (datos.dia <= 22 && datos.mes == 9)),
-            elemento: 'la Tierra'
+            fecha: ((datos.dia >= 23 && datos.mes == 8) || (datos.dia <= 22 && datos.mes == 9))
         },
         {
             signo: 'Libra',
-            fecha: ((datos.dia >= 23 && datos.mes == 9) || (datos.dia <= 22 && datos.mes == 10)),
-            elemento: 'el Aire'
+            fecha: ((datos.dia >= 23 && datos.mes == 9) || (datos.dia <= 22 && datos.mes == 10))
         },
         {
             signo: 'Escorpio',
-            fecha: ((datos.dia >= 23 && datos.mes == 10) || (datos.dia <= 21 && datos.mes == 11)),
-            elemento: 'el Agua'
+            fecha: ((datos.dia >= 23 && datos.mes == 10) || (datos.dia <= 21 && datos.mes == 11))
         },
         {
             signo: 'Sagitario',
-            fecha: ((datos.dia >= 22 && datos.mes == 11) || (datos.dia <= 21 && datos.mes == 12)),
-            elemento: 'el Fuego'
+            fecha: ((datos.dia >= 22 && datos.mes == 11) || (datos.dia <= 21 && datos.mes == 12))
         },
         {
             signo: 'Capricornio',
-            fecha: ((datos.dia >= 22 && datos.mes == 12) || (datos.dia <= 19 && datos.mes == 1)),
-            elemento: 'la Tierra'
+            fecha: ((datos.dia >= 22 && datos.mes == 12) || (datos.dia <= 19 && datos.mes == 1))
         },
         {
             signo: 'Acuario',
-            fecha: ((datos.dia >= 20 && datos.mes == 1) || (datos.dia <= 18 && datos.mes == 2)),
-            elemento: 'el Aire'
+            fecha: ((datos.dia >= 20 && datos.mes == 1) || (datos.dia <= 18 && datos.mes == 2))
         },
         {
             signo: 'Piscis',
-            fecha: ((datos.dia >= 19 && datos.mes == 2) || (datos.dia <= 20 && datos.mes == 3)),
-            elemento: 'el Agua'
+            fecha: ((datos.dia >= 19 && datos.mes == 2) || (datos.dia <= 20 && datos.mes == 3))
         },
     ];
 
