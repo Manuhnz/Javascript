@@ -26,27 +26,32 @@ h1 {
     margin-bottom: 1rem;
     font-family: pinecone-mvb-rough2;
     font-weight: 400;
+    font-size: 2.1rem;
 }
 
 .formulario {
-    width: 28rem;
+    width: 26rem;
     padding: 2rem;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     background-color: white;
     border-radius: 1rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 8px 16px;
     border-radius: 5px;
-    border:1px solid #b8b8b8;
-    color:#515151;
+    border: 1px solid #b8b8b8;
+    color: #515151;
 }
-.inputDia, .inputMes {
+
+.inputDia,
+.inputMes {
     background-color: #ededed;
 }
+
 .btn {
     margin: 5px 0;
 }
@@ -61,3 +66,14 @@ input, select {
     gap: 0.5rem;
 }
 
+.alert {
+    border-radius: 1rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    min-width: 90vw;
+    min-height: 90vh;
+    z-index: 2;
+}
+
+.card{
+    min-width: 90%;
+}
